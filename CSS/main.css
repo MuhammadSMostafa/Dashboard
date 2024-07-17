@@ -7,14 +7,14 @@ body {
   background-color: var(--bg-main-color);
 }
 @media only screen and (max-width: 720px) {
-  main .dashboard-content .card-item{
-    min-width: 250px;
+  main .dashboard-content .card-item {
+    min-width: 300px;
   }
-  main .customers .customers-content #user{
+  main .customers .customers-content #user {
     min-width: 430px;
   }
-  main .customers .search input{
-    width: 100%
+  main .customers .search input {
+    display: none;
   }
 }
 aside {
@@ -43,9 +43,13 @@ main {
   color: var(--main-color);
   margin-left: 250px;
 }
+.container {
+  margin-top: 70px;
+}
 main nav {
   padding: 10px var(--main-margin-padding);
   box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+  margin-left: 250px;
 }
 main .dashboard-content .card-item {
   background-color: white;
@@ -69,7 +73,7 @@ main table td {
   border: 1px solid #ddd;
 }
 main .customers .search input {
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 20px;
   border: var(--main-color) solid 2px;
   color: var(--main-color);
