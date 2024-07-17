@@ -138,7 +138,7 @@ main .customers .customers-content #user .transaction p {
   position: absolute;
   inset: 0;
   background-color: var(--main-color);
-  z-index: 1000;
+  z-index: 99999;
   display: grid;
   place-content: center;
 }
