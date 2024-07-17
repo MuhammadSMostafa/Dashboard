@@ -13,6 +13,9 @@ body {
   main .customers .customers-content #user{
     min-width: 430px;
   }
+  main .customers .search input{
+    width: 100%
+  }
 }
 aside {
   background-color: var(--main-color);
