@@ -1,0 +1,137 @@
+:root {
+  --main-color: #004182;
+  --bg-main-color: #e9f4ff;
+  --main-margin-padding: 20px;
+}
+body {
+  background-color: var(--bg-main-color);
+}
+@media only screen and (max-width: 720px) {
+  main .dashboard-content .card-item{
+    min-width: 250px;
+  }
+  main .customers .customers-content #user{
+    min-width: 500px
+  }
+}
+aside {
+  background-color: var(--main-color);
+  width: 250px;
+  left: 0;
+  z-index: 9999;
+}
+aside .image {
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+}
+aside .link {
+  font-size: 25px;
+  line-height: 21px;
+  border-radius: 20px 0 0 20px;
+  cursor: pointer;
+  color: white;
+}
+aside .link.active {
+  background-color: white;
+  color: var(--main-color);
+}
+main {
+  color: var(--main-color);
+  margin-left: 250px;
+}
+main nav {
+  padding: 10px var(--main-margin-padding);
+  box-shadow: 0 4px 4px -4px rgba(0, 0, 0, 0.5);
+}
+main .dashboard-content .card-item {
+  background-color: white;
+  border-radius: 20px;
+}
+main .dashboard-content .card-item .card-footer {
+  font-size: 20px;
+  font-weight: 600;
+}
+main table {
+  background-color: white;
+  border-radius: 20px;
+  border: white solid 2px;
+}
+main .dashboard-content table .table-button {
+  display: none;
+}
+main table th,
+main table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+main .customers .search input {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: var(--main-color) solid 2px;
+  color: var(--main-color);
+}
+main .customers .search input:focus {
+  outline: none;
+}
+main .customers-content table span {
+  cursor: pointer;
+  font-size: 18px;
+}
+main .customers-content table span:hover {
+  color: black;
+}
+main .customers .customers-content table button {
+  border-radius: 20px;
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  border: var(--main-color) solid 2px;
+  cursor: pointer;
+}
+main .customers .customers-content table button:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+main .customers .customers-content #user {
+  padding: var(--main-margin-padding);
+  border-radius: 20px;
+}
+main .customers .customers-content #user .transaction {
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 5px var(--main-margin-padding);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+main .customers .customers-content #user .transaction p {
+  margin: 0;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loading {
+  position: absolute;
+  inset: 0;
+  background-color: var(--main-color);
+  z-index: 1000;
+  display: grid;
+  place-content: center;
+}

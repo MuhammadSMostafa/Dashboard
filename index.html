@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+  <body>
+    <aside class="d-flex flex-column position-fixed top-0 bottom-0 gap-4">
+      <div class="image rounded-circle overflow-hidden align-self-center mt-5">
+        <img src="Images/Route.png" alt="" class="w-100" />
+      </div>
+      <div
+        class="link active d-flex align-items-center gap-2 ms-4 p-3"
+        id="dashboard"
+      >
+        <span class="icon">
+          <i class="fa-solid fa-chart-simple"></i>
+        </span>
+        <p class="m-0">Dashboard</p>
+      </div>
+      <div class="link d-flex align-items-center gap-2 ms-4 p-3" id="customers">
+        <span class="icon"><i class="fa-solid fa-users"></i></span>
+        <p class="m-0">Customers</p>
+      </div>
+    </aside>
+    <main>
+      <div class="dashboard">
+        <nav class="bg-white">
+          <h1>DashBoard</h1>
+        </nav>
+        <div class="dashboard-content p-4">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-4">
+                <div class="card-item w-100 d-flex flex-column gap-2 p-3 mb-3">
+                  <span class="icon align-self-center mb-3">
+                    <i class="fa-solid fa-user-group fa-2x"></i>
+                  </span>
+                  <div class="card-footer d-flex justify-content-between">
+                    <p>Total Customers</p>
+                    <p id="total-customers"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="card-item w-100 d-flex flex-column gap-2 p-3 mb-3">
+                  <span class="icon align-self-center mb-3">
+                    <i class="fa-solid fa-money-bill fa-2x"></i>
+                  </span>
+                  <div class="card-footer d-flex justify-content-between">
+                    <p>Total Transaction</p>
+                    <p id="total-transaction"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="card-item w-100 d-flex flex-column gap-2 p-3 mb-3">
+                  <span class="icon align-self-center mb-3">
+                    <i class="fa-solid fa-dollar-sign fa-2x"></i>
+                  </span>
+                  <div class="card-footer d-flex justify-content-between">
+                    <p>Total Amount</p>
+                    <p id="total-amount"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <table class="w-100 text-center p-5 overflow-hidden">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Transaction Amount</th>
+                  <th>Number of Transactions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="customers d-none">
+        <nav class="bg-white">
+          <h1>Customers</h1>
+        </nav>
+        <div class="search d-flex justify-content-center my-4">
+          <input
+            type="search"
+            placeholder="Search"
+            id="search-input"
+            class="w-50"
+          />
+        </div>
+        <div class="customers-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-7 mb-3">
+                <table class="w-100 text-center p-5 overflow-hidden">
+                  <thead>
+                    <tr>
+                      <th>
+                        Name
+                        <span onclick="filterByName()">
+                          <i class="fa-solid fa-sort-down"></i>
+                        </span>
+                      </th>
+                      <th>
+                        Transaction Amount
+                        <span onclick="filterByAmount()"
+                          ><i class="fa-solid fa-sort-down"></i
+                        ></span>
+                      </th>
+                      <th>Number of Transactions</th>
+                      <th>Details</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div class="col-xl-5 mb-3">
+                <div id="user" class="w-100 d-flex flex-column bg-white gap-3">
+                  <h2 class="align-self-center">
+                    <span id="user-name"></span>'s Transactions
+                  </h2>
+                  <div class="chart">
+                    <div id="chart"></div>
+                  </div>
+                  <div id="user-data" class="d-flex flex-column gap-3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="loading" id="loader">
+        <span class="loader"></span>
+      </div>
+    </main>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
