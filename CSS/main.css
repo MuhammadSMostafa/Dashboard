@@ -13,6 +13,9 @@ body {
   main .customers .customers-content #user {
     min-width: 430px;
   }
+    main .customers .search {
+    padding-left: 250px;
+  }
   main .customers .search input {
     min-width: 200px;
   }
